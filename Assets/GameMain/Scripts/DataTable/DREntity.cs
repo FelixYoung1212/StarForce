@@ -44,8 +44,18 @@ namespace StarForce
             get;
             private set;
         }
+        
+        public DREntity(string dataRowString, object userData)
+        {
+            ParseDataRow(dataRowString, userData);
+        }
+        
+        public DREntity(byte[] dataRowBytes, int startIndex, int length, object userData)
+        {
+            ParseDataRow(dataRowBytes, startIndex, length, userData);
+        }
 
-        public override bool ParseDataRow(string dataRowString, object userData)
+        public bool ParseDataRow(string dataRowString, object userData)
         {
             string[] columnStrings = dataRowString.Split(DataTableExtension.DataSplitSeparators);
             for (int i = 0; i < columnStrings.Length; i++)
@@ -63,7 +73,7 @@ namespace StarForce
             return true;
         }
 
-        public override bool ParseDataRow(byte[] dataRowBytes, int startIndex, int length, object userData)
+        public bool ParseDataRow(byte[] dataRowBytes, int startIndex, int length, object userData)
         {
             using (MemoryStream memoryStream = new MemoryStream(dataRowBytes, startIndex, length, false))
             {

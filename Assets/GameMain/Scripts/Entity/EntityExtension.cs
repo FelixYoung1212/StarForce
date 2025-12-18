@@ -96,7 +96,7 @@ namespace StarForce
                 return;
             }
 
-            entityComponent.ShowEntity(data.Id, logicType, AssetUtility.GetEntityAsset(drEntity.AssetName), entityGroup, priority, data);
+            entityComponent.ShowEntity(data.Id, logicType, AssetUtility.GetEntityAsset(drEntity.AssetName), entityGroup, data);
         }
 
         public static int GenerateSerialId(this EntityComponent entityComponent)

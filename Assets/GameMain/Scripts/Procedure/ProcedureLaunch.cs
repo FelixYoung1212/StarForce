@@ -32,9 +32,6 @@ namespace StarForce
             // 语言配置：设置当前使用的语言，如果不设置，则默认使用操作系统语言
             InitLanguageSettings();
 
-            // 变体配置：根据使用的语言，通知底层加载对应的资源变体
-            InitCurrentVariant();
-
             // 声音配置：根据用户配置数据，设置即将使用的声音选项
             InitSoundSettings();
 
@@ -53,7 +50,7 @@ namespace StarForce
 
         private void InitLanguageSettings()
         {
-            if (GameEntry.Base.EditorResourceMode && GameEntry.Base.EditorLanguage != Language.Unspecified)
+            if (GameEntry.Base.EditorLanguage != Language.Unspecified)
             {
                 // 编辑器资源模式直接使用 Inspector 上设置的语言
                 return;
@@ -86,42 +83,6 @@ namespace StarForce
 
             GameEntry.Localization.Language = language;
             Log.Info("Init language settings complete, current language is '{0}'.", language.ToString());
-        }
-
-        private void InitCurrentVariant()
-        {
-            if (GameEntry.Base.EditorResourceMode)
-            {
-                // 编辑器资源模式不使用 AssetBundle，也就没有变体了
-                return;
-            }
-
-            string currentVariant = null;
-            switch (GameEntry.Localization.Language)
-            {
-                case Language.English:
-                    currentVariant = "en-us";
-                    break;
-
-                case Language.ChineseSimplified:
-                    currentVariant = "zh-cn";
-                    break;
-
-                case Language.ChineseTraditional:
-                    currentVariant = "zh-tw";
-                    break;
-
-                case Language.Korean:
-                    currentVariant = "ko-kr";
-                    break;
-
-                default:
-                    currentVariant = "zh-cn";
-                    break;
-            }
-
-            GameEntry.Resource.SetCurrentVariant(currentVariant);
-            Log.Info("Init current variant complete.");
         }
 
         private void InitSoundSettings()

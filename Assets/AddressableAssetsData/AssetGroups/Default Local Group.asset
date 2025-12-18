@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: bdc812e4352116b41b284e9327054542
+  m_SerializeEntries:
+  - m_GUID: 1b4f365128ca0464e92e3807ed00659e
+    m_Address: Assets/GameMain/UI
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d7ecb029ed444b498c036cbfed748b3
+    m_Address: Assets/GameMain/Fonts
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 50bb427da72e6164c995404fac1a139c
+    m_Address: Assets/GameMain/Entities
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 59a2d1790cd025a4c97ea4ec1411df76
+    m_Address: Assets/GameMain/Configs
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8aa04725784d110458eddfb0f7fed5dc
+    m_Address: Assets/GameMain/Scenes
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 984d61fd85771c24d866338058d9947a
+    m_Address: Assets/GameMain/Music
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd88511da0fe74b49b2e524258462780
+    m_Address: Assets/GameMain/Sounds
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cb66f764daca35841ac1f3b7d2d08771
+    m_Address: Assets/GameMain/Localization
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e26a71e8fdced3541a5c691a5d8da0e7
+    m_Address: Assets/GameMain/DataTables
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 7596e825f435ca148958aa49145f948d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 9c8c19512784e834295a24a73cd59db3, type: 2}
+    - {fileID: 11400000, guid: 6747ee7451b77514397d78985928e37c, type: 2}

@@ -35,7 +35,7 @@ namespace StarForce
             playSoundParams.VolumeInSoundGroup = 1f;
             playSoundParams.FadeInSeconds = FadeVolumeDuration;
             playSoundParams.SpatialBlend = 0f;
-            s_MusicSerialId = soundComponent.PlaySound(AssetUtility.GetMusicAsset(drMusic.AssetName), "Music", Constant.AssetPriority.MusicAsset, playSoundParams, null, userData);
+            s_MusicSerialId = soundComponent.PlaySound(AssetUtility.GetMusicAsset(drMusic.AssetName), "Music", playSoundParams, null, userData);
             return s_MusicSerialId;
         }
 
@@ -65,7 +65,7 @@ namespace StarForce
             playSoundParams.Loop = drSound.Loop;
             playSoundParams.VolumeInSoundGroup = drSound.Volume;
             playSoundParams.SpatialBlend = drSound.SpatialBlend;
-            return soundComponent.PlaySound(AssetUtility.GetSoundAsset(drSound.AssetName), "Sound", Constant.AssetPriority.SoundAsset, playSoundParams, bindingEntity != null ? bindingEntity.Entity : null, userData);
+            return soundComponent.PlaySound(AssetUtility.GetSoundAsset(drSound.AssetName), "Sound", playSoundParams, bindingEntity != null ? bindingEntity.Entity : null, userData);
         }
 
         public static int? PlayUISound(this SoundComponent soundComponent, int uiSoundId, object userData = null)
@@ -83,7 +83,7 @@ namespace StarForce
             playSoundParams.Loop = false;
             playSoundParams.VolumeInSoundGroup = drUISound.Volume;
             playSoundParams.SpatialBlend = 0f;
-            return soundComponent.PlaySound(AssetUtility.GetUISoundAsset(drUISound.AssetName), "UISound", Constant.AssetPriority.UISoundAsset, playSoundParams, userData);
+            return soundComponent.PlaySound(AssetUtility.GetUISoundAsset(drUISound.AssetName), "UISound", playSoundParams, userData);
         }
 
         public static bool IsMuted(this SoundComponent soundComponent, string soundGroupName)
