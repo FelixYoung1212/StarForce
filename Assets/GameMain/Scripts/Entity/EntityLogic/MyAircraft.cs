@@ -5,6 +5,8 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
+using System.Collections;
+using GameFramework.Resource;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
@@ -51,6 +53,27 @@ namespace StarForce
 
             m_PlayerMoveBoundary = new Rect(sceneBackground.PlayerMoveBoundary.bounds.min.x, sceneBackground.PlayerMoveBoundary.bounds.min.z,
                 sceneBackground.PlayerMoveBoundary.bounds.size.x, sceneBackground.PlayerMoveBoundary.bounds.size.z);
+
+            AsyncOperationHandleBase<TextAsset> handle0 = null;
+            GameEntry.Resource.LoadAsset<TextAsset>(AssetUtility.GetDataTableAsset("Aircraft", false)).OnSucceeded +=
+                handle =>
+                {
+                    handle0 = handle;
+                };
+            GameEntry.Resource.LoadAsset<TextAsset>(AssetUtility.GetDataTableAsset("Aircraft", false)).OnSucceeded +=
+                handle1 =>
+                {
+                    StartCoroutine(UnloadTable(handle0, handle1));
+                };
+        }
+
+        IEnumerator UnloadTable(AsyncOperationHandleBase<TextAsset> handle, AsyncOperationHandleBase<TextAsset> handle1)
+        {
+            yield return new WaitForSeconds(1.0f);
+            GameEntry.Resource.UnloadAsset(handle.Result);
+            GameEntry.Resource.LoadAsset<TextAsset>(AssetUtility.GetDataTableAsset("Aircraft", false));
+            GameEntry.Resource.UnloadAsset(handle1.Result);
+            GameEntry.Resource.UnloadAsset(handle1.Result);
         }
 
 #if UNITY_2017_3_OR_NEWER
