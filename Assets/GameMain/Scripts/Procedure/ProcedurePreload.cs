@@ -10,6 +10,7 @@ using GameFramework.Event;
 using GameFramework.Resource;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
@@ -55,7 +56,10 @@ namespace StarForce
 
             m_LoadedFlag.Clear();
 
-            PreloadResources();
+            Addressables.InitializeAsync().Completed += handle =>
+            {
+                PreloadResources();
+            };
         }
 
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)

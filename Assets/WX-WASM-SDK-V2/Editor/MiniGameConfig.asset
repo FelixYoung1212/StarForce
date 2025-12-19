@@ -15,11 +15,12 @@ MonoBehaviour:
   ProjectConf:
     projectName: 
     Appid: 
-    CDN: 
+    CDN: http://192.168.120.97
     assetLoadType: 0
     compressDataPackage: 0
     VideoUrl: 
-    DST: 
+    relativeDST: F:/UnityProjects/StarForce/WechatExport
+    DST: F:/UnityProjects/StarForce/WechatExport
     StreamCDN: 
     bundleHashLength: 32
     bundlePathIdentifier: StreamingAssets;
@@ -45,11 +46,12 @@ MonoBehaviour:
     UseCompressedTexture: 0
     UseMiniGameChat: 0
     PreloadWXFont: 0
+    disableMultiTouch: 0
   CompileOptions:
     DevelopBuild: 0
     AutoProfile: 0
     ScriptOnly: 0
-    Il2CppOptimizeSize: 1
+    Il2CppOptimizeSize: 0
     profilingFuncs: 1
     Webgl2: 0
     fbslim: 0
@@ -61,9 +63,13 @@ MonoBehaviour:
     showMonitorSuggestModal: 1
     enableProfileStats: 0
     enableRenderAnalysis: 0
+    enablePerfAnalysis: 0
     iOSAutoGCInterval: 10000
     enableIOSPerformancePlus: 0
+    enableiOSMetal: 0
+    enableEmscriptenGLX: 0
     brotliMT: 1
+    enableWasm2023: 0
   CompressTexture:
     halfSize: 0
     useDXT5: 0
