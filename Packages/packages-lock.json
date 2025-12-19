@@ -41,11 +41,11 @@
       "hash": "73a63b7f672b88f7e9992f6917eb458a8cbb6fa9"
     },
     "com.qq.weixin.minigame": {
-      "version": "https://gitee.com/wechat-minigame/minigame-tuanjie-transform-sdk.git#v0.1.18",
+      "version": "https://gitee.com/wechat-minigame/minigame-tuanjie-transform-sdk.git#main",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "4443e5a9bcf800118f7c3e10a7750e804ed3121b"
+      "hash": "98c94c1219b8ddf48d2836e946c5d5d16bfd2cca"
     },
     "com.unity.2d.animation": {
       "version": "9.2.0",
@@ -280,19 +280,6 @@
       "dependencies": {},
       "url": "https://packages.tuanjie.cn"
     },
-    "com.unity.purchasing": {
-      "version": "4.11.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.ugui": "1.0.0",
-        "com.unity.modules.unitywebrequest": "1.0.0",
-        "com.unity.modules.jsonserialize": "1.0.0",
-        "com.unity.modules.androidjni": "1.0.0",
-        "com.unity.services.core": "1.8.2"
-      },
-      "url": "https://packages.tuanjie.cn"
-    },
     "com.unity.render-pipelines.core": {
       "version": "14.1.0",
       "depth": 1,
@@ -351,7 +338,7 @@
     },
     "com.unity.services.core": {
       "version": "1.14.0",
-      "depth": 1,
+      "depth": 2,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.androidjni": "1.0.0",
@@ -417,16 +404,6 @@
       "dependencies": {
         "com.unity.ugui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
-      },
-      "url": "https://packages.tuanjie.cn"
-    },
-    "com.unity.xr.legacyinputhelpers": {
-      "version": "2.1.12",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.modules.vr": "1.0.0",
-        "com.unity.modules.xr": "1.0.0"
       },
       "url": "https://packages.tuanjie.cn"
     },
