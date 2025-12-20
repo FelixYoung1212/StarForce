@@ -15,12 +15,12 @@ MonoBehaviour:
   ProjectConf:
     projectName: 
     Appid: 
-    CDN: http://192.168.120.97
-    assetLoadType: 0
+    CDN: http://192.168.1.41/
+    assetLoadType: 1
     compressDataPackage: 0
     VideoUrl: 
-    relativeDST: F:/UnityProjects/StarForce/WechatExport
-    DST: F:/UnityProjects/StarForce/WechatExport
+    relativeDST: E:/UnityProjects/StarForce_Addressable_Luban/WechatExport
+    DST: E:/UnityProjects/StarForce_Addressable_Luban/WechatExport
     StreamCDN: 
     bundleHashLength: 32
     bundlePathIdentifier: StreamingAssets;
@@ -51,7 +51,7 @@ MonoBehaviour:
     DevelopBuild: 0
     AutoProfile: 0
     ScriptOnly: 0
-    Il2CppOptimizeSize: 0
+    Il2CppOptimizeSize: 1
     profilingFuncs: 1
     Webgl2: 0
     fbslim: 0
